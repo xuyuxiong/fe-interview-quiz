@@ -1,0 +1,19 @@
+{
+  "name": "fe-interview-quiz",
+  "version": "1.0.0",
+  "description": "前端面试题库 - 自测式学习，覆盖 JavaScript、CSS、HTML、浏览器、网络、框架、工程化、算法",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "deploy": "npm run docs:build && gh-pages -d docs/.vitepress/dist -b gh-pages"
+  },
+  "keywords": ["frontend", "interview", "quiz", "javascript", "css", "react", "vue"],
+  "author": "xilin",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vitepress": "^1.6.3"
+  }
+}

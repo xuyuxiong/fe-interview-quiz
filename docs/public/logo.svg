@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4285f4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Brain outline -->
+  <path d="M50 15 C35 15 25 25 25 40 C25 45 27 49 30 52 C22 56 18 65 20 73 C22 82 30 88 40 88 L60 88 C70 88 78 82 80 73 C82 65 78 56 70 52 C73 49 75 45 75 40 C75 25 65 15 50 15 Z" 
+        fill="url(#brainGrad)" 
+        stroke="#1a73e8" 
+        stroke-width="2"/>
+  
+  <!-- Brain folds -->
+  <path d="M50 20 L50 35 M35 25 L45 32 M65 25 L55 32 M30 40 L40 45 M70 40 L60 45 M32 55 L45 58 M68 55 L55 58 M35 70 L50 72 M65 70 L50 72" 
+        stroke="#ffffff" 
+        stroke-width="1.5" 
+        stroke-linecap="round" 
+        fill="none"/>
+  
+  <!-- Code brackets -->
+  <text x="28" y="68" font-family="monospace" font-size="24" fill="#ffffff" font-weight="bold">&lt;</text>
+  <text x="58" y="68" font-family="monospace" font-size="24" fill="#ffffff" font-weight="bold">/&gt;</text>
+</svg>

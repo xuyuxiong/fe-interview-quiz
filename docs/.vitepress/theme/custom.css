@@ -1,0 +1,176 @@
+/* ========================================
+   前端面试题库 - 自定义样式
+   纯 Markdown 格式增强
+   ======================================== */
+
+/* ---- 难度标签颜色（blockquote 中的加粗文字） ---- */
+blockquote strong {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* 简单 · 绿色 */
+blockquote:has(strong) {
+  border-left: 4px solid var(--vp-c-brand);
+}
+
+/* ---- Details 容器（答案折叠）美化 ---- */
+.custom-block.details {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  margin: 16px 0;
+  overflow: hidden;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-block.details:hover {
+  border-color: var(--vp-c-brand);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.custom-block.details summary {
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--vp-c-brand);
+  border-bottom: 1px solid var(--vp-c-divider);
+  transition: background 0.2s;
+}
+
+.custom-block.details summary:hover {
+  background: var(--vp-c-bg);
+}
+
+.custom-block.details summary::marker {
+  color: var(--vp-c-brand);
+}
+
+.custom-block.details .custom-block-content {
+  padding: 20px 24px;
+  border-left: 4px solid var(--vp-c-brand);
+  background: var(--vp-c-bg);
+  margin: 0;
+}
+
+/* ---- 答案中的标题样式 ---- */
+.custom-block.details h4 {
+  margin-top: 0;
+  color: var(--vp-c-brand);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---- 知识点标签 ---- */
+.custom-block.details p:last-child {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--vp-c-divider);
+}
+
+/* 知识点 code 标签样式增强 */
+.custom-block.details p:last-child code {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--vp-c-brand-dimm);
+  color: var(--vp-c-brand);
+  border: none;
+  margin: 2px 2px;
+}
+
+/* ---- 题目编号样式 ---- */
+h3[id^="q"] {
+  position: relative;
+  padding-left: 0;
+  scroll-margin-top: 80px;
+}
+
+/* ---- 表格美化 ---- */
+.custom-block.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.custom-block.details table th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  text-align: left;
+}
+
+.custom-block.details table th,
+.custom-block.details table td {
+  padding: 10px 14px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.custom-block.details table tr:hover td {
+  background: var(--vp-c-bg-soft);
+}
+
+/* ---- 代码块美化 ---- */
+.custom-block.details div[class*="language-"] {
+  margin: 12px 0;
+  border-radius: 8px;
+}
+
+/* ---- 分隔线样式 ---- */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--vp-c-divider), transparent);
+  margin: 32px 0;
+}
+
+/* ---- 首页样式增强 ---- */
+.VPHero .name {
+  background: linear-gradient(135deg, var(--vp-c-brand), var(--vp-c-brand-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- 暗色主题适配 ---- */
+.dark .custom-block.details {
+  border-color: var(--vp-c-divider);
+}
+
+.dark .custom-block.details:hover {
+  border-color: var(--vp-c-brand-light);
+}
+
+.dark .custom-block.details .custom-block-content {
+  border-left-color: var(--vp-c-brand-light);
+}
+
+.dark .custom-block.details p:last-child code {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--vp-c-brand-light);
+}
+
+/* ---- 打印样式 ---- */
+@media print {
+  .custom-block.details {
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  
+  .custom-block.details summary {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .custom-block.details[open] summary {
+    margin-bottom: 0;
+  }
+}
